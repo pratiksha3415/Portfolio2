@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratiksha Aghav Portfolio</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        nav {
+            background: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav button {
+            color: #fff;
+            margin: 0 15px;
+            padding: 10px 15px;
+            border: none;
+            background: #555;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        nav button:hover {
+            background: #666;
+        }
+        section {
+            display: none; /* Initially hide all sections */
+            padding: 20px;
+            min-height: 80vh;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        /* Mobile View */
+        @media only screen and (max-width: 768px) {
+            nav button {
+                display: block;
+                margin: 10px 0;
+                width: 80%; /* Make buttons wider on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Pratiksha Aghav</h1>
+        <p>Second Year Computer Engineering Student, AISSMS IOIT</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <button onclick="showSection('about')">About Me</button>
+        <button onclick="showSection('education')">My Education</button>
+        <button onclick="showSection('skills')">Personal Skills</button>
+        <button onclick="showSection('contact')">Contact Me</button>
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Pratiksha Aghav, a second-year Computer Engineering student at AISSMS IOIT. I am passionate about coding and technology. Currently, I am also the CLDO (Chief Learning and Development Officer) of the Cybershield Club, where I am learning and contributing to cybersecurity.</p>
+    </section>
+
+    <!-- My Education Section -->
+    <section id="education">
+        <h2>My Education</h2>
+        <ul>
+            <li>Pursuing a Bachelor of Engineering in Computer Engineering at AISSMS IOIT</li>
+            <li>Completed High School from XYZ School with a focus on Science</li>
+        </ul>
+    </section>
+
+    <!-- Personal Skills Section -->
+    <section id="skills">
+        <h2>Personal Skills</h2>
+        <ul>
+            <li>Programming Languages: C++, Python, HTML, CSS</li>
+            <li>Problem Solving and Algorithms</li>
+            <li>Cybersecurity Enthusiast</li>
+            <li>Leadership Skills: CLDO at Cybershield Club</li>
+        </ul>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>You can reach me at: <strong>pratikshaaghav@example.com</strong></p>
+        <p>Thank you for visiting my portfolio!</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Pratiksha Aghav. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to show the selected section and hide others
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+
+        // Show the About Me section by default
+        showSection('about');
+    </script>
+
+</body>
+</html>
